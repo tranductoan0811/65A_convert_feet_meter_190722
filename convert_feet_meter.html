@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h3>Chuyển đổi giữa feet và meters</h3>
+  <h3>công thức chuyển đổi: meter = 0.305 * foot / foot = 3.279 * meter</h3>
+  <!-- Xây dựng hai phương thức sau:
+  Chuyển đổi từ feet sang meters: function footToMeter(foot)
+  Chuyển đổi từ meters sang feet: function meterToFoot(meter) 
+   công thức chuyển đổi: 
+   meter = 0.305 * foot / foot = 3.279 * meter  
+  -->
+
+  <script>
+    function footToMeter(foot) {
+      return 0.305 * foot;
+    }
+ 
+    function meterToFoot(meter) {
+      return 3.279 * meter;
+    }
+ 
+    function display() {
+      var inputMeter = +document.getElementById("input_meter").value;
+      var inputFoot = +document.getElementById("input_foot").value;
+
+      document.getElementById("result_foot").innerHTML = meterToFoot(inputMeter);
+      document.getElementById("result_meter").innerHTML = footToMeter(inputFoot);
+    }
+  </script>
+
+</head>
+<body>
+<form style="width: 450px;">
+  <fieldset>
+    <legend style="width: 400px;text-align: center;">Chuyển đổi giữa feet và meters</legend>
+    <p>Enter Meter (m):<input type="number" id="input_meter" style="margin-left: 10px;text-align: center;font-size: 16px;font-weight: bold;color: blue;"></p>
+    <p>Enter Foot: <input type="number" id="input_foot" style="margin-left: 40px;text-align: center;font-size: 16px;font-weight: bold;color: blue;"></p>
+
+
+    <p onclick="display();" onchange="display();">( Click ) Kết quả từ Meter sang Foot: <span id="result_foot"></span></p>
+    <p onclick="display();" onchange="display();">( Click ) Kết quả từ Foot sang Meter: <span id="result_meter"></span></p>
+  </fieldset>
+</form>
+</body>
+
+
+</html>
